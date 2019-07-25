@@ -21,7 +21,6 @@ public class LinkedhashSetExample {
 		System.out.println(set);
 		
 		int size = set.size();
-		//System.out.println("The size of LinkedHashSet is "+size);
 		Scanner scr = new Scanner(System.in);
 		System.out.println("Enter the number to be searched in LinkedHashSet");
 		int search = scr.nextInt();
@@ -45,17 +44,21 @@ public class LinkedhashSetExample {
 				}
 				else if(index>=size)
 				{
-					System.out.println("Entered number is greater than the size of INDEX");
-					throw new ArrayIndexOutOfBoundsException();
-					
+					throw new CustomisedIndexOutOfBoundException();				
 				}
-			}
-			
-		}
-		
-		
-		
-		
+			}			
+		}	
 	}
+}
 
+
+/* customised exception */
+@SuppressWarnings("serial")
+class CustomisedIndexOutOfBoundException extends RuntimeException 
+{
+	@Override
+	public String getMessage() {
+		
+		return "Entered number is greater than the size of INDEX";
+	}
 }
