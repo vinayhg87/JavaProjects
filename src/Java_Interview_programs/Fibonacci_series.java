@@ -15,7 +15,6 @@ public class Fibonacci_series {
 			System.out.println(fib3);
 			fib1=fib2;
 			fib2=fib3;
-			//i++;
 		}
 		
 		
