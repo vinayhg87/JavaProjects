@@ -44,6 +44,7 @@ public class linkedlistHetrogeniousData {
 				System.out.println(boo1);
 			}
 		}
+	
 		
 	}
 
