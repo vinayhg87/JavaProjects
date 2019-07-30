@@ -15,7 +15,7 @@ public class SortNumbers {
 		{
 			for(int j=i+1;j<5;j++)
 			{
-				if(a1[i]<a1[j])
+				if(a1[i]>a1[j])
 				{
 					int temp;
 					temp=a1[i];
@@ -31,7 +31,4 @@ public class SortNumbers {
 		}
 	}
 	
-
-	
-
 }

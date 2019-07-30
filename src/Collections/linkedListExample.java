@@ -1,5 +1,6 @@
 package Collections;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 
 public class linkedListExample {
@@ -44,10 +45,18 @@ public class linkedListExample {
 		link.add(2, 22222223);
 		System.out.println(link);
 		
+		
 		/* Advanced for loop */
 		for (int linkdata : link)
 		{
 			System.out.println(linkdata);
+		}
+		
+		System.out.println("descendingIterator() method");
+		Iterator<Integer> itr=link.descendingIterator();
+		while(itr.hasNext())
+		{
+			System.out.println(itr.next());
 		}
 			
 	}
