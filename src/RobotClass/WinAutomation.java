@@ -19,12 +19,11 @@ public class WinAutomation {
 		WebDriver driver  = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(9, TimeUnit.MINUTES);
 		driver.get("https://www.seleniumhq.org/download/");
-		//driver.findElement(By.xpath("//td[text()='Java']/..//*[contains(text(),'Download')]")).click();
+		driver.findElement(By.xpath("//td[text()='Java']/..//*[contains(text(),'Download')]")).click();
 		//OR// driver.findElement(By.xpath("//*[text()='Java']//parent::tr//*[contains(text(),'Download')]")).click();
-		/*
 		Robot robot = new Robot();
 		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);*/
+		robot.keyRelease(KeyEvent.VK_ENTER);
 		
 		
 	}
