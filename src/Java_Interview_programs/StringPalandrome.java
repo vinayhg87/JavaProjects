@@ -6,18 +6,16 @@ public class StringPalandrome {
 	
 	public static void main(String[] args) {
 		
-		System.out.println("Enter the string");
-		Scanner scr =  new Scanner(System.in);
-		String Str=scr.nextLine();
-		String reverse="";
+		System.out.println("Enter the String:");
+		Scanner scr = new Scanner(System.in);
+		String str = scr.nextLine(); //hello
+		String reverse = " ";
 		
-		for(int i=0;i<Str.length();i++)
+		for(int i=0; i<str.length();i++)
 		{
-			reverse=Str.charAt(i)+reverse;
+			reverse = str.charAt(i)+reverse;
 		}
-		
 		System.out.println(reverse);
-			
 		scr.close();
 	}
 }

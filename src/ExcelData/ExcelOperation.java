@@ -64,52 +64,32 @@ public class ExcelOperation {
 		//System.out.println("The Column count is "+excel.ColumnCount("Sheet1", 6));
 	}
 	
-	
-	
-	public String ExcelRead(String Sheetname, int rownum, int cellnum) 
+	public int ExcelRead(String sheetname, int rownum, int cellnum) throws EncryptedDocumentException, InvalidFormatException, FileNotFoundException, IOException
 	{
-		try
-		{
-			Workbook wb = WorkbookFactory.create(new FileInputStream(Excelpath));
-			Sheet sh = wb.getSheet(Sheetname);
-			Row rw = sh.getRow(rownum);
-			Cell ce = rw.getCell(cellnum);
-			Result = ce.getStringCellValue();
-			System.out.println(Result);
-		}
-		catch(NullPointerException e)
-		{
-			//e.printStackTrace();
-			System.out.println("Cell is Empty");
-		}
-		catch(Exception e)
-		{
-			e.printStackTrace();
-		}
-		return Result;
+		Workbook wb = WorkbookFactory.create(new FileInputStream(Excelpath));
+		Sheet sh = wb.getSheet(sheetname);
+		Row row = sh.getRow(rownum);
+		Cell ce=row.getCell(cellnum);
+		int result = (int)ce.getNumericCellValue();
+		wb.close();
+		
+		return result;	
 	}
 	
 	
-	
-	public void ExcelWrite(String Sheetname, int rownum, int cellnum, String Data)
+	public void ExcelWrite(String sheetname, int rownum, int cellnum, String data) throws EncryptedDocumentException, InvalidFormatException, FileNotFoundException, IOException
 	{
-		try 
-		{
-			Workbook wb = WorkbookFactory.create(new FileInputStream(Excelpath));
-			Sheet sh = wb.getSheet(Sheetname);
-			Row rw = sh.createRow(rownum);
-			Cell ce = rw.createCell(cellnum);
-			ce.setCellValue(Data);
-			FileOutputStream filewrite = new FileOutputStream(Excelpath);
-			wb.write(filewrite);
-			
-			} 
-		catch (Exception e) 
-			{
-				System.out.println(e);
-			}
+		Workbook wb = WorkbookFactory.create(new FileInputStream(Excelpath));
+		Sheet sh = wb.getSheet(sheetname);
+		Row row=sh.getRow(rownum);
+		Cell ce=row.createCell(cellnum);
+		ce.setCellValue(data);
+		FileOutputStream filewrite = new FileOutputStream(Excelpath);
+		wb.write(filewrite);
+		wb.close();
+		
 	}
-	
+
 	
 	
 	public int rowCount(String Sheetname)

@@ -9,17 +9,13 @@ public class FindDuplicateChar {
 		System.out.println("Enter the String:");
 		Scanner scr = new Scanner(System.in);
 		String str =scr.nextLine();
+		int count = 0;
 		
-		char[] charArray = str.toCharArray();
-		
-		for(int i=0;i<charArray.length;i++)
+		for(int i=0;i<str.length()-1;i++)
 		{
-			for(int j=i+1;j<charArray.length;j++)
+			if((str.charAt(i)+"").equals(str.charAt(i+1)+""))
 			{
-				if (charArray[i]==charArray[j])
-				{
-					System.out.println(charArray[i]+" is duplicate");
-				}
+				System.out.println(str.charAt(i));
 			}
 		}
 		
