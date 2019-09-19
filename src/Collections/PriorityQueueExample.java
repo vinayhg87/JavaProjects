@@ -12,7 +12,7 @@ public class PriorityQueueExample {
 	 * does not affect the size of the queue. If the queue is empty the peek() method returns null.
 	 *  
 	 * The element() method : behaves like peek(), so it again retrieves the value of the first element without removing it. 
-	 * Unlike peek ), however, if the list is empty element() throws a NoSuchElementException
+	 * Unlike peek (), however, if the list is empty element() throws a NoSuchElementException
      *  
      * The poll() method : retrieves the value of the first element of the queue by removing it from the queue. . 
      * At each invocation it removes the first element of the list and if the list is already empty it returns null 
@@ -33,6 +33,7 @@ public class PriorityQueueExample {
 		queue.add("hello3");
 		queue.add("hello5");
 		queue.add("hello6");
+		
 		
 		System.out.println("Actual queue Collection.");
 		System.out.println(queue);
