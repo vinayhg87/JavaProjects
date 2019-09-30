@@ -67,6 +67,7 @@ public class DBConnect {
 					if (!row.equals(" "))
 					{
 						System.out.println(row.toString());
+						
 					}
 				}
 				catch (NullPointerException e)
