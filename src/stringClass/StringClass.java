@@ -8,6 +8,11 @@ public class StringClass {
 		String s1 = "Hello";
 		String s2 = new String("Hello");
 		String s3 = "hello";
+		String s4 = "Hello";
+		
+		System.out.println("comparing");
+		System.out.println(s3==s4);
+		System.out.println(s3.equals(s4));
 				
 		/* toString */
 		System.out.println("From ToString method");
