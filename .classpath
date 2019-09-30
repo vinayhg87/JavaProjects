@@ -19,5 +19,6 @@
 	<classpathentry kind="lib" path="C:/Users/VinayVinay/Desktop/Vinay Docs/Eclipse/commons-io-2.6-bin/commons-io-2.6/commons-io-2.6-sources.jar"/>
 	<classpathentry kind="lib" path="C:/Users/VinayVinay/Desktop/Vinay Docs/Eclipse/commons-io-2.6-bin/commons-io-2.6/commons-io-2.6-tests.jar"/>
 	<classpathentry kind="lib" path="C:/Users/VinayVinay/Desktop/Vinay Docs/Eclipse/commons-io-2.6-bin/commons-io-2.6/commons-io-2.6-test-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/VinayVinay/Desktop/Vinay Docs/Eclipse/Selenium_projects/Web190_Automation/libs/ojdbc14_g.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
