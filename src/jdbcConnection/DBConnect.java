@@ -25,8 +25,8 @@ public class DBConnect {
 		DBConnect conn = new DBConnect();
 		System.out.println("The description of type_id 528 = " 
 						+ conn.Connectdatabase("select * from TEM_ORDER_TYPE where type_id = '528'"));
-//		System.out.println("The description of type_id 9270 = " 
-//						+ conn.Connectdatabase("select description from TEM_ORDER_TYPE where type_id = '9270'"));
+		System.out.println("The description of type_id 9270 = " 
+						+ conn.Connectdatabase("select description from TEM_ORDER_TYPE where type_id = '9270'"));
 //		System.out.println("The description of type_id 7212 = " 
 //						+ conn.Connectdatabase("select description from TEM_ORDER_TYPE where type_id = '7212'"));
 	}
@@ -41,7 +41,7 @@ public class DBConnect {
 		Properties prop = new Properties(); 
 		prop.load(new FileInputStream(propertiesFile));
 		
-		ArrayList<String> sqllist = new ArrayList<String>();
+		ArrayList<String> sqlCollist = new ArrayList<String>();
 		Class.forName("oracle.jdbc.driver.OracleDriver");
 		Connection bscsdb = DriverManager.getConnection(prop.getProperty("DBname"),prop.getProperty("username"), prop.getProperty("password"));
 		Statement stmt = bscsdb.createStatement();
@@ -50,16 +50,16 @@ public class DBConnect {
 		{
 			/* to get the column count in a table */
 			ResultSetMetaData metadata = rs.getMetaData();
-			int columncount1 = metadata.getColumnCount();
+			int columncount = metadata.getColumnCount();
 			
 			/* adding the DB data to list collection */
-			for (int i=1;i<=columncount1;i++)
+			for (int i=1;i<=columncount;i++)
 			{
-				sqllist.add(rs.getString(i));
+				sqlCollist.add(rs.getString(i));
 			}
 			
 			/* Fetching data using advanced for loop */
-			for (Object row : sqllist)
+			for (Object row : sqlCollist)
 			{
 				try
 				{
@@ -79,7 +79,7 @@ public class DBConnect {
 		
 		bscsdb.close();
 		
-		return sqllist;	
+		return sqlCollist;	
 	}
 
 }
