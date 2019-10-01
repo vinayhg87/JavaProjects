@@ -50,10 +50,10 @@ public class DBConnect {
 		{
 			/* to get the column count in a table */
 			ResultSetMetaData metadata = rs.getMetaData();
-			int columncount = metadata.getColumnCount();
+			int columncount1 = metadata.getColumnCount();
 			
 			/* adding the DB data to list collection */
-			for (int i=1;i<=columncount;i++)
+			for (int i=1;i<=columncount1;i++)
 			{
 				sqllist.add(rs.getString(i));
 			}
