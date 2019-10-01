@@ -56,7 +56,6 @@ public class DBConnect {
 			for (int i=1;i<=columncount;i++)
 			{
 				sqllist.add(rs.getString(i));
-				
 			}
 			
 			/* Fetching data using advanced for loop */
