@@ -1,0 +1,3 @@
+2019-09-30 20:46:41 INFO  logDemo:18 - Test message of INFO
+2019-09-30 20:46:41 ERROR logDemo:19 - Test meessage of error
+2019-09-30 20:46:41 WARN  logDemo:20 - Test message of warning
