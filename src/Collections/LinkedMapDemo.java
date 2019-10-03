@@ -14,7 +14,7 @@ public class LinkedMapDemo {
 		lmap.put(3, "Hello3");
 		
 		
-		System.out.println(lmap);
+		System.out.println(lmap);	
 		
 		/* Rest all the methods are same as HashMap methods */
 	}
