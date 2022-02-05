@@ -10,35 +10,35 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 public class Row_count {
-	
+
 	public int count;
-	
+
 	public int GetRowCount(String sheetname) throws InvalidFormatException
 	{
 		String currentdir = System.getProperty("user.dir");
 		String Excelpath = currentdir + File.separator +"NIFTY_AutoTrading.xlsx";
-		try 
+		try
 		{
 			FileInputStream fileReadcount = new FileInputStream(Excelpath);
 			Workbook wb = WorkbookFactory.create(fileReadcount);
 			Sheet sh = wb.getSheet(sheetname);
-			count = sh.getLastRowNum();	
-		} 
-		
-		catch (FileNotFoundException e) 
-		{
-			e.printStackTrace();
-		} 
-		catch (IOException e) 
+			count = sh.getLastRowNum();
+		}
+
+		catch (FileNotFoundException e)
 		{
 			e.printStackTrace();
 		}
-		
-		catch (NullPointerException e) 		
+		catch (IOException e)
+		{
+			e.printStackTrace();
+		}
+
+		catch (NullPointerException e)
 		{
 			System.out.println("Row or Sheet does not exists");
 			System.exit(0);
-		}	
+		}
 		return count;
 	}
 }
